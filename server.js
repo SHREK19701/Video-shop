@@ -18,8 +18,10 @@ const earningsPerView = 50; // Výdělek za jedno zhlédnutí
 // Middleware pro práci s JSON
 app.use(express.json());
 
-// Middleware pro práci se statickými soubory (HTML, CSS, JS)
-app.use(express.static(__dirname + "/public"));
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
+});
+
 
 // Funkce pro ověření připojení k databázi
 const verifyDatabase = async () => {
