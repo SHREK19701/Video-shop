@@ -1,9 +1,9 @@
 const axios = require('axios');
 
 async function getAccessToken() {
-  const clientId = 'AZGCnL2ay09Sv2OiqNcHJ6i1Kx19IrzXRAhfJxRSN-DIxV4kktBJf7KJYtaa6EJja2X8k19KbL0wryoY';
+  const clientId = '';
  
-  const clientSecret = 'ENIIpOjhjFQCSvYK9giJ4OVgL3bsEWs4YvnT0nS1GgwzcOHd3o1w01MiJZFnpHprUeZTiPt3QCfqCb9N'; 
+  const clientSecret = ''; 
   
   const auth = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
   
@@ -30,7 +30,7 @@ async function sendPayment(accessToken, amount) {
         value: amount,
         currency: 'CZK'
       },
-      receiver: 'luisganste@gmail.com', // Zde zadejte svuj e-mail na PayPal
+      receiver: ', // Zde zadejte svuj e-mail na PayPal
       note: 'Payment from API'
     }]
   };
